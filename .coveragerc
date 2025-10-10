@@ -1,2 +1,17 @@
+# .coveragerc
 [run]
 plugins = boa.coverage
+source =
+    src
+    script
+branch = True
+relative_files = True
+parallel = True
+concurrency = multiprocessing
+
+[report]
+show_missing = True
+skip_empty = True
+omit =
+    */.venv/*
+    tests/*

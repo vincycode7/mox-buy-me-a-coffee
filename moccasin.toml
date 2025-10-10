@@ -3,15 +3,22 @@ src = "src"
 
 [networks.contracts.price_feed]
 deployer_script = "script/deploy_mocks.py"
+abi = "mock_v3_aggregator"
+
+[networks.contracts.coffee]
+deployer_script = "script/deploy.py"
 
 [networks.sepolia]
 url = "$SEPOLIA_RPC_URL"
-save_to_db = true
-default_account_name = "default"
+save_to_db = false
 explorer_uri = "https://eth-sepolia.blockscout.com/"
 explorer_type = "blockscout"
-
-[networks.pyevm.contracts.price_feed]
+default_account_name = "default"
 
 [networks.sepolia.contracts.price_feed]
 address = "0x694AA1769357215DE4FAC081bf1f309aDC325306"
+
+[networks.anvil]
+url = "$ANVIL_RPC_URL"
+default_account_name = "anvil1"
+save_to_db = true
